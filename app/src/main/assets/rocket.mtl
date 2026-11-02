@@ -1,0 +1,15 @@
+newmtl hull
+Kd 0.930 0.930 0.950
+
+newmtl nose
+Kd 0.850 0.150 0.150
+
+newmtl stripe
+Kd 0.850 0.150 0.150
+
+newmtl metal
+Kd 0.350 0.350 0.400
+
+newmtl glass
+Kd 0.250 0.600 0.950
+

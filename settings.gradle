@@ -1,0 +1,18 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        // Huawei Maven: здесь лежит HUAWEI AR Engine SDK
+        maven { url 'https://developer.huawei.com/repo/' }
+    }
+}
+rootProject.name = "ARImageTrackingHuawei"
+include ':app'

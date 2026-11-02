@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.opengl.GLSurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:background="#99000000"
+        android:padding="8dp"
+        android:text="Наведите камеру на картинку-метку"
+        android:textColor="#FFFFFF"
+        android:textSize="13sp" />
+
+    <!-- Метка на весь экран: чтобы навести на неё камеру другого телефона -->
+    <ImageView
+        android:id="@+id/ivMarker"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:contentDescription="marker"
+        android:scaleType="fitCenter"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btnMarker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="12dp"
+        android:text="Показать метку" />
+</FrameLayout>

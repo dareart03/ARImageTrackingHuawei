@@ -1,0 +1,36 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.example.imagetracking'
+    // 34, а не 36: при targetSdk 35+ Android принудительно включает edge-to-edge,
+    // и верхняя строка статуса / нижние кнопки уезжают под системные панели.
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.imagetracking.huawei"
+        minSdk 26
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+        ndk {
+            abiFilters 'arm64-v8a', 'armeabi-v7a'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    // HUAWEI AR Engine SDK (версия из официального демо HMS-Core/hms-AREngine-demo)
+    implementation 'com.huawei.hms:arenginesdk:4.0.0.5'
+}
